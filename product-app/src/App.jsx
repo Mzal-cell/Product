@@ -1,30 +1,19 @@
 
-import Product from './component/Product';
+import Product from './components/Product.jsx'
 
 function App() {
-  const productData = [
-    { id: 1, name: "Mechanical Keyboard", price: 120, inStock: true },
-    { id: 2, name: "Ergonomic Mouse", price: 85, inStock: false },
-    { id: 3, name: "Ultrawide Monitor", price: 450, inStock: true },
-    { id: 4, name: "USB-C Hub", price: 45, inStock: true },
-  ];
-
   return (
-    <div style={{ padding: '2rem' }}>
-      <h1>My Tech Shop</h1>
-      <div style={{ display: 'flex', flexWrap: 'wrap' }}>
-        {productData.map((item) => (
-          <Product 
-            key={item.id} 
-            name={item.name} 
-            price={item.price} 
-            inStock={item.inStock} 
-          />
-        ))}
-      </div>
-    </div>
-  );
+    <>
+      <h1>Welcome to My Tech Store</h1>
+      <h3>Find the best tech products at unbeatable prices!</h3>
+      <Product name="Laptop" price={999.99} inStock={true} />
+      <Product name="Mouse" price={29.99} inStock={false} />
+      <Product name="Keyboard" price={49.99} inStock={true} />
+      <Product name="Monitor" price={199.99} inStock={true} />
+      <Product name="Headphones" price={149.99} inStock={false} />
+    </>
+  )
 }
 
-export default Product;
+export default App
 
